@@ -1,0 +1,30 @@
+
+@media screen and (min-width: 768px){
+  html {
+    font-size: 150%;
+  }
+  #header-content{
+    flex-direction: row;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+  .feature-section {
+    flex-direction: row;
+    .feature-section-content {
+      width: 50%;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .feature-section-img {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      justify-content: center;
+      padding: 2rem;
+    }
+  }
+}

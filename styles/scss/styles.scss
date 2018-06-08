@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+@import "media-queries";
 $dark_gray: rgb(85, 85, 85);
 $light_gray: #F8F8F8;
 $dark_blue: rgb(25, 118, 161);
@@ -6,7 +7,9 @@ $basefont: 'Lato', sans-serif;
 
 html{
   font-family: $basefont;
-  font-size: 150%;
+}
+* {
+  box-sizing: border-box;
 }
 
 html,
@@ -22,7 +25,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-size: 0.7rem;
   letter-spacing: 0.5px;
   font-weight: 300;
 }
@@ -39,9 +41,10 @@ p {
 
 #header-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   color: white;
   justify-content: center;
+  padding: 2rem 1rem;
 }
 
 #header-info {
@@ -54,7 +57,6 @@ p {
     font-weight: normal;
   }
   p {
-    font-size: 0.7rem;
     letter-spacing: 0.5px;
   }
   .price {
@@ -63,6 +65,7 @@ p {
     font-weight: 300;
     margin-left: 0.5rem;
   }
+
 
   .btn {
     background-color: $dark_blue;
@@ -130,24 +133,31 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
+  border-bottom: 1px solid black;
+  padding: 0.5rem;
 }
 
 .feature-section {
   display: flex;
-  flex-direction: row;
-  width: 1100px;
+  flex-direction: column;
+  max-width: 1100px;
   justify-content: center;
-  .feature-section-content {
-    width: 50%;
-  }
+
   &:nth-child(even) {
-    flex-direction: row-reverse;
+    flex-direction: column;
   }
 }
 
 .img-fluid {
-  width: auto;
-  height: 70%;
+  width: 100%;
+  height: auto;
+}
+
+iframe{
+  width: 95vw;
+  max-width: 1120px;
+  height: 53.25vw;
+  max-height: 630px;
 }
 
 #techspecs{
@@ -155,14 +165,17 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1100px;
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding: 0.5rem;
 
   table {
     font-weight: 300;
-    border: 2px solid black;
+    border-collapse: collapse;
+    max-width: 1100px;
+    margin: 2rem 0;
     tr{
       td{
-        border: 1px solid black;
         padding: 1rem;
         border-bottom: 1px solid black;
         &:first-child {
@@ -171,6 +184,11 @@ a {
         }
         &:nth-child(2){
           text-align: left;
+        }
+      }
+      &:last-child {
+        td{
+          border-bottom: none;
         }
       }
     }
