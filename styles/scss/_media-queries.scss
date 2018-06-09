@@ -1,5 +1,5 @@
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 785px){
   html {
     font-size: 150%;
   }
@@ -26,5 +26,19 @@
       justify-content: center;
       padding: 2rem;
     }
+  }
+
+  #nav-bar ul {
+    flex-direction: row!important;
+  }
+
+  .nav-link {
+    width: max-content!important;
+    padding: 0;
+    background-color: transparent!important;
+  }
+
+  .navbar-toggler {
+    display: none;
   }
 }
