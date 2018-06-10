@@ -92,20 +92,25 @@ p {
   display: flex;
   flex-direction: column;
   background-color: $light_gray;
-
-  .navbar-toggler{
-    outline: none;
-    background-color: transparent;
-    border: none;
-    padding: 1rem;
-    align-self: flex-end;
+  .navbar-toggler-wrapper{
+    width: 100%;
     z-index: 10;
-    span {
-      display: block;
-      border: 1px solid black;
-      margin: 5px;
-      width: 20px;
-      transition: all 0.3s;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    .navbar-toggler{
+      outline: none;
+      background-color: transparent;
+      border: none;
+      padding: 1rem;
+      align-self: flex-end;
+      span {
+        display: block;
+        border: 1px solid black;
+        margin: 5px;
+        width: 20px;
+        transition: all 0.3s;
+      }
     }
   }
 
@@ -118,10 +123,16 @@ p {
     padding-left: 0;
     justify-content: center;
     position: absolute;
-    top: -200px;
+    top: -250px;
     left: -15px;
     right: -15px;
-    transition: all 0.5s;
+    transition: all 0.3s;
+    li {
+      padding: 1rem 2rem;
+      margin: 0 0.125rem;
+      width: 100%;
+      background-color: $light_gray;
+    }
   }
 }
 
@@ -142,15 +153,6 @@ p {
   }
   ul{
     top: 50px;
-    li{
-      padding: 1rem 2rem;
-      margin: 0 0.125rem;
-      width: 100%;
-      background-color: $light_gray;
-      a {
-        color: $dark_gray;
-      }
-    }
   }
 }
 
@@ -161,6 +163,7 @@ a:link,
 a:hover{
   text-decoration: none;
   text-transform: capitalize;
+  color: $dark_gray
 }
 
 .content{
