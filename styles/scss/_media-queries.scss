@@ -30,12 +30,14 @@
 
   #nav-bar ul {
     flex-direction: row!important;
+    background-color: white!important;
+    top: -10px!important;
   }
 
   .nav-link {
     width: max-content!important;
-    padding: 0;
-    background-color: transparent!important;
+    padding: 1rem!important;
+    background-color: $light_gray!important;
   }
 
   .navbar-toggler {
