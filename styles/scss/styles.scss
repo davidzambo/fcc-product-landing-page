@@ -66,23 +66,22 @@ p {
     font-weight: 300;
     margin-left: 0.5rem;
   }
+}
 
-
-  .btn {
-    background-color: $dark_blue;
-    color: $light_gray;
-    border: 2px solid $light_gray;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-family: $basefont;
-    padding: 0.5rem 1rem;
-    transition: all 0.1s;
-    cursor: pointer;
-    font-weight: bold;
-    &:hover {
-      background-color: $light_gray;
-      color: $dark_blue;
-    }
+.btn {
+  background-color: $dark_blue;
+  color: $light_gray;
+  border: 2px solid $light_gray;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-family: $basefont;
+  padding: 0.5rem 1rem;
+  transition: all 0.1s;
+  cursor: pointer;
+  font-weight: bold;
+  &:hover {
+    background-color: $light_gray;
+    color: $dark_blue;
   }
 }
 
@@ -143,22 +142,23 @@ p {
   }
   ul{
     top: 50px;
+    li{
+      padding: 1rem 2rem;
+      margin: 0 0.125rem;
+      width: 100%;
+      background-color: $light_gray;
+      a {
+        color: $dark_gray;
+      }
+    }
   }
 }
 
-.nav-link{
-  padding: 1rem 2rem;
-  margin: 0 0.125rem;
-  width: 100%;
-  background-color: $light_gray;
-  a {
-    color: $dark_gray;
-  }
-}
 
-
-
-a {
+a,
+a:visited,
+a:link,
+a:hover{
   text-decoration: none;
   text-transform: capitalize;
 }
@@ -217,7 +217,7 @@ iframe{
   width: 100%;
   border-bottom: 1px solid black;
   padding: 0.5rem;
-
+  background-color: $light_gray;
   table {
     font-weight: 300;
     border-collapse: collapse;
@@ -241,5 +241,37 @@ iframe{
         }
       }
     }
+  }
+}
+
+#subscription {
+  background-color: $light_gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+
+  #email {
+    width: calc(100vw - 2rem);
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+  #submit {
+    width: calc(100vw - 2rem);
+  }
+}
+
+footer{
+  background-color: black;
+  color: white;
+  font-size: 13px;
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  img{
+    height: 18px;
+    width: auto;
+    vertical-align: text-bottom;
   }
 }
