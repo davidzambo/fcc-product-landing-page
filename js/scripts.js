@@ -20,8 +20,12 @@ function toggleNavbar(){
 
 for (link of links){
     link.addEventListener('click', e => {
+        e.preventDefault();
         clearActiveTag();
-       e.target.parentNode.classList.add('active');
+        e.target.parentNode.classList.add('active');
+        document.querySelector(e.target.getAttribute('data-target')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 }
 
