@@ -38,15 +38,24 @@
       width: max-content !important;
       padding: 0.5rem 1rem !important;
       background-color: #F8F8F8 !important; }
+      #nav-bar ul li.active {
+        border-bottom: 4px solid red; }
+        #nav-bar ul li.active a {
+          padding-left: 0 !important; }
 
   .navbar-toggler-wrapper * {
     display: none; }
 
+  #form {
+    flex-direction: row !important; }
+
   #email {
-    max-width: 500px; }
+    max-width: 500px;
+    padding: 0.5rem !important; }
 
   #submit {
-    width: max-content !important; } }
+    width: max-content !important;
+    padding: 0.5rem 1rem !important; } }
 html {
   font-family: "Lato", sans-serif; }
 
@@ -157,15 +166,17 @@ p {
       margin: 0 0.125rem;
       width: 100%;
       background-color: #F8F8F8; }
+      #nav-bar ul li.active a {
+        padding-left: 1rem; }
 
 #nav-bar.open .navbar-toggler span {
   transition: all 0.3s; }
   #nav-bar.open .navbar-toggler span:first-child {
-    transform: rotate(45deg) translate(0px, 10px); }
+    transform: rotate(45deg) translate(5px, 5px); }
   #nav-bar.open .navbar-toggler span:nth-child(2) {
     opacity: 0; }
   #nav-bar.open .navbar-toggler span:last-child {
-    transform: rotate(-45deg) translate(0px, -10px); }
+    transform: rotate(-45deg) translate(5px, -5px); }
 #nav-bar.open ul {
   top: 50px; }
 
@@ -247,12 +258,17 @@ iframe {
   justify-content: center;
   align-items: center;
   padding-bottom: 2rem; }
+  #subscription #form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
   #subscription #email {
     width: calc(100vw - 2rem);
-    padding: 0.5rem;
+    padding: 1rem;
     margin: 0.5rem; }
   #subscription #submit {
-    width: calc(100vw - 2rem); }
+    width: calc(100vw - 2rem + 4px);
+    padding: 1rem; }
 
 footer {
   background-color: black;

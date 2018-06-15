@@ -46,6 +46,12 @@
       width: max-content!important;
       padding: 0.5rem 1rem!important;
       background-color: $light_gray!important;
+      &.active {
+        border-bottom: 4px solid red;
+        a{
+          padding-left: 0!important;
+        }
+      }
     }
   }
 
@@ -53,10 +59,16 @@
     display: none;
   }
 
+  #form{
+    flex-direction: row!important;
+  }
+
   #email{
     max-width: 500px;
+    padding: 0.5rem!important;
   }
   #submit{
     width: max-content!important;
+    padding: 0.5rem 1rem!important;
   }
 }

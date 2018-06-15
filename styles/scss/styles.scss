@@ -132,6 +132,9 @@ p {
       margin: 0 0.125rem;
       width: 100%;
       background-color: $light_gray;
+      &.active a {
+        padding-left: 1rem;
+      }
     }
   }
 }
@@ -141,13 +144,13 @@ p {
     span{
       transition: all 0.3s;
       &:first-child {
-        transform: rotate(45deg) translate(0px, 10px);
+        transform: rotate(45deg) translate(5px, 5px);
       }
       &:nth-child(2){
         opacity: 0;
       }
       &:last-child {
-        transform: rotate(-45deg) translate(0px, -10px);
+        transform: rotate(-45deg) translate(5px, -5px);
       }
     }
   }
@@ -255,13 +258,19 @@ iframe{
   align-items: center;
   padding-bottom: 2rem;
 
+  #form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   #email {
     width: calc(100vw - 2rem);
-    padding: 0.5rem;
+    padding: 1rem;
     margin: 0.5rem;
   }
   #submit {
-    width: calc(100vw - 2rem);
+    width: calc(100vw - 2rem + 4px);
+    padding: 1rem;
   }
 }
 
