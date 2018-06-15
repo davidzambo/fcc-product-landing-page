@@ -27,11 +27,11 @@
                 </button>
             </div>
             <ul>
-                <li><a class="nav-link" href="#header-content">Home</a></li>
-                <li><a class="nav-link" href="#video-wrapper">View Video</a></li>
-                <li><a class="nav-link" href="#features">Features</a></li>
-                <li><a class="nav-link" href="#techspecs">Tech Specs</a></li>
-                <li><a class="nav-link" href="#subscription">Subscribe</a></li>
+                <li class="active"><a class="nav-link" data-target="#header-content" href="#header-content">Home</a></li>
+                <li><a class="nav-link" data-target="#features" href="#features">Features</a></li>
+                <li><a class="nav-link" data-target="#techspecs" href="#techspecs">Tech Specs</a></li>
+                <li><a class="nav-link" data-target="#video-wrapper" href="#video-wrapper">View Video</a></li>
+                <li><a class="nav-link" data-target="#subscription" href="#subscription">Subscribe</a></li>
             </ul>
         </nav>
         <div id="header-content">
@@ -245,12 +245,7 @@
     </footer>
 </div>
 
-<script>
-    function toggleNavbar(){
-        const navbar = document.querySelector('#nav-bar');
-        navbar.classList.toggle('open');
-    }
-</script>
+<script src="js/scripts.js"></script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
