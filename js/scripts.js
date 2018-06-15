@@ -22,7 +22,6 @@ for (link of links){
     link.addEventListener('click', e => {
         e.preventDefault();
         clearActiveTag();
-        e.target.parentNode.classList.add('active');
         document.querySelector(e.target.getAttribute('data-target')).scrollIntoView({
             behavior: 'smooth'
         });
@@ -34,8 +33,13 @@ document.addEventListener('scroll', () => {
    clearActiveTag();
    for (let i = 0; i < sectionPositions.length; i++){
        if (sectionPositions[i] - 300 > scrollPosition){
-           links[i].parentNode.classList.add('active');
-           break;
+           if (scrollPosition  === document.body.scrollHeight - window.innerHeight){
+               links[links.length - 1].parentNode.classList.add('active');
+               break;
+           } else {
+               links[i].parentNode.classList.add('active');
+               break;
+           }
        }
    }
 });
